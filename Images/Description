@@ -1,1 +1,6 @@
 
+This folder contain the input images in png format used for the model.
+
+Along with png files the csv files included show pixel values of image 
+of digits with different intensity values where black indicate zero(0) in csv file and
+wherever number is written different values(1-255) is shown in csv file.
