@@ -8,9 +8,9 @@ import seaborn as sns
 image_size = 28
 no_of_different_labels = 10
 image_pixels = image_size * image_size
-train_path = "/Users/yogesh/Desktop/CollegeProject/CV_proj/cv_oct/train.csv"
+train_path = "path/train.csv"
 #test_path = "/Users/yogesh/Desktop/CollegeProject/CV_proj/cv_oct/test.csv"
-test_path = "/Users/yogesh/Desktop/CollegeProject/CV_proj/cv_oct/test_veri.csv"
+test_path = "path/test_veri.csv"
 
 train_data = pd.read_csv(train_path)
 test_data = pd.read_csv(test_path)
@@ -56,13 +56,3 @@ output.reset_index(inplace=True)
 output['index'] = output['index'] + 1
 output.rename(columns={'index': 'ImageId'}, inplace=True)
 output.to_csv('output.csv', index=False)
-
-
-# confusion_mtx = confusion_matrix(expected, predicted)
-# # plot the confusion matrix
-# f,ax = plt.subplots(figsize=(8, 8))
-# sns.heatmap(confusion_mtx, annot=True, linewidths=0.01,cmap="Greens",linecolor="gray", fmt= '.1f',ax=ax)
-# plt.xlabel("Predicted Label")
-# plt.ylabel("True Label")
-# plt.title("Confusion Matrix")
-# plt.show()
